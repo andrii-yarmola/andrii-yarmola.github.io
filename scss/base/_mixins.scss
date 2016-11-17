@@ -1,8 +1,8 @@
 // example usage: @include cuboid(100, 100, 50px);
 
-@mixin cuboid ($depth: 50px, $width: auto, $height: auto) {
-	height: $height;
-	width: $width;
+@mixin cuboid ($depth: 70px, $width: auto, $height: auto) {
+	@if $width != auto {width: $width;}
+	@if $height != auto {height: $height;}
 	position: relative;
 
 	.face {
@@ -23,6 +23,7 @@
 		top: 0;
 		left: 0;
 		transform: translateZ(-($depth));
+		pointer-events:none;
 	}
 
 	.top {
@@ -30,6 +31,7 @@
 		top: 0;
 		left: 0;
 		transform: translateZ(-($depth/2)) translateY(-($depth/2)) rotateX(90deg);
+		pointer-events:none;
 	}
 
 	.bottom {
@@ -38,6 +40,7 @@
 		bottom: 0;
 		left: 0;
 		transform: translateZ(-($depth/2)) translateY($depth/2) rotateX(90deg);
+		pointer-events:none;
 	}
 
 	.left {
@@ -45,6 +48,7 @@
 		top: 0;
 		left: 0;
 		transform: translateZ(-($depth/2)) rotateY(90deg) translateZ(-($depth/2));
+		pointer-events:none;
 	}
 
 	.right {
@@ -53,6 +57,7 @@
 		left: auto;
 		right: 0;
 		transform: translateZ(-($depth/2)) rotateY(90deg) translateZ($depth/2);
+		pointer-events:none;
 	}
 }
 

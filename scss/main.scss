@@ -42,18 +42,70 @@ $media-expressions: (
 .col{
 	float: left;
 	width: 33.33%;
-	padding: 0 10px;
+	padding: 0 30px;
 }
 
 .box{
-	padding: 10px;
-	border-radius: 10px;
+	@include cuboid();
+	transform-style: preserve-3d;
 	background: $white;
+	margin-bottom: 60px;
+	box-shadow: 0 0 20px 10px rgba(200, 200, 200, 0.6);
+	position: relative;
+	.face {
+		box-shadow: 0 0 0 1px rgba(200, 200, 200, 0.8);
+		overflow: hidden;
+	}
+	.link{
+		padding: 10px;
+		display: block;
+		&:hover{
+			.options-holder{
+				transform: none;
+			}
+		}
+	}
+	.title{
+		font-weight: bold;
+		text-transform: capitalize;
+		display: block;
+		margin-bottom: 10px;
+	}
+	.img-holder{
+		display: block;
+		border: 1px solid rgba(40, 40, 40, 0.8);
+	}
+	.options-holder{
+		background: rgba(0, 0, 0, 0.7);
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		transition: transform 0.3s;
+		transform: translate(0, 160%);
+	}
+	ul{
+		@extend %listreset;
+		padding: 10px 20px;
+		font-size: 14px;
+		line-height: 1;
+		li{
+			color: $white;
+			margin-bottom: 5px;
+			position: relative;
+			padding-left: 20px;
+			i{
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+		}
+	}
 }
 
 .row{
 	@extend %clearfix;
-	margin: 0 -10px;
+	margin: 0 -15px;
 }
 
 .scene *{
@@ -62,20 +114,17 @@ $media-expressions: (
 
 #header{
 	transform-style: preserve-3d;
-	padding: 200px 0;
 	position: relative;
+	margin-bottom: 30px;
 	&:before{
 		content:'';
 		position: absolute;
-		left: -999px;
-		top: -999px;
-		bottom: -999px;
-		right: -999px;
-		background: #1c1d21;
+		left: -9999px;
+		top: -9999px;
+		bottom: 0;
+		right: -9999px;
+		background: #202020;
 		transform: translate3D(0, 0, -50px);
-	}
-	.top-frame{
-		@extend %clearfix;
 	}
 }
 
@@ -127,7 +176,7 @@ $media-expressions: (
 	@extend %clearfix;
 	max-width: 1380px;
 	margin: 0 auto;
-	padding: 0 10px;
+	padding: 0 15px;
 }
 
 

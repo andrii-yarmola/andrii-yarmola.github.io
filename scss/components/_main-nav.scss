@@ -3,12 +3,15 @@
 	font-size: 16px;
 	line-height: 30px;
 	transform-style: preserve-3d;
+	position: relative;
+	float: right;
+	padding-top: 20px;
 	ul{
 		@extend %listreset;
 		transform-style: preserve-3d;
 	}
 	li{
-		@include cuboid();
+		@include cuboid(25px);
 		transform-style: preserve-3d;
 		display: inline-block;
 		vertical-align: middle;
@@ -25,7 +28,7 @@
 			background-color: rgba(255, 255, 255, 0.9);
 		}
 		.back {
-			background-color: rgba(254, 221, 1, 0.5);
+			background-color: rgba(254, 221, 1, 0.3);
 		}
 	}
 	a{
