@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "cube.css",
+	"sources": [
+		"../../scss/components/cube.scss"
+	],
+	"mappings": "",
+	"names": []
+}
