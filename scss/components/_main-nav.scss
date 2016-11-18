@@ -1,21 +1,29 @@
 #main-nav{
-	text-align: center;
-	font-size: 16px;
-	line-height: 30px;
-	transform-style: preserve-3d;
-	position: relative;
-	float: right;
-	padding-top: 20px;
-	ul{
 		@extend %listreset;
 		transform-style: preserve-3d;
-	}
+		text-align: center;
+		font-size: 16px;
+		line-height: 30px;
+		transform-style: preserve-3d;
+		position: relative;
+		float: right;
+		padding-top: 20px;
+		@include media ('<tablet') {
+			float: none;
+			padding-top: 10px;
+			font-size: 14px;
+			line-height: 20px;
+		}
 	li{
 		@include cuboid(25px);
 		transform-style: preserve-3d;
 		display: inline-block;
 		vertical-align: middle;
 		margin: 0 10px;
+		@include media ('<tablet') {
+			display: block;
+			margin-bottom: 5px;
+		}
 		&.active a, a:hover{
 			background: #333;
 			color: $white;
@@ -28,7 +36,7 @@
 			background-color: rgba(255, 255, 255, 0.9);
 		}
 		.back {
-			background-color: rgba(254, 221, 1, 0.3);
+			background-color: rgba(254, 221, 200, 0.3);
 		}
 	}
 	a{

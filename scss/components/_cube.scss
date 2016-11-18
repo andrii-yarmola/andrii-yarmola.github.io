@@ -253,7 +253,7 @@
 	position: relative;
 	&:before,
 	&:after{
-		content: 'About me / contacts';
+		content:attr(title);
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -268,14 +268,6 @@
 	&:before {
 		color: #0ff;
 		z-index: -1;
-	}
-	.n2 &:before,
-	.n2 &:after{
-		content:'Commercy works';
-	}
-	.n5 &:before,
-	.n5 &:after{
-		content:'React home tasks';
 	}
 }
 

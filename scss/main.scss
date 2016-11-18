@@ -32,6 +32,7 @@ $media-expressions: (
 
 @import 'components/cube';
 @import 'components/main-nav';
+@import 'components/single-task';
 
 #wrapper{
 	position: relative;
@@ -39,22 +40,40 @@ $media-expressions: (
 	background: #f0f4f7;
 }
 
+#main{
+	min-height: calc(100vh - 110px);
+	display: flex;
+	align-items: center;
+}
+
 .col{
 	float: left;
 	width: 33.33%;
 	padding: 0 30px;
+	@include media ('<desktop') {
+		padding: 0 15px;
+	}
+	@include media ('<tablet') {
+		width: 100%;
+	}
 }
 
 .box{
 	@include cuboid();
 	transform-style: preserve-3d;
-	background: $white;
+	background: rgba(255, 255, 255, 0.5);
 	margin-bottom: 60px;
 	box-shadow: 0 0 20px 10px rgba(200, 200, 200, 0.6);
 	position: relative;
+	@include media ('<desktop') {
+		margin-bottom: 30px;
+	}
 	.face {
 		box-shadow: 0 0 0 1px rgba(200, 200, 200, 0.8);
 		overflow: hidden;
+	}
+	.back{
+		background-color: rgba(204, 221, 230, 0.5);
 	}
 	.link{
 		padding: 10px;
@@ -89,6 +108,9 @@ $media-expressions: (
 		padding: 10px 20px;
 		font-size: 14px;
 		line-height: 1;
+		@include media ('<desktop') {
+			font-size: 12px;
+		}
 		li{
 			color: $white;
 			margin-bottom: 5px;
@@ -100,6 +122,19 @@ $media-expressions: (
 				left: 0;
 			}
 		}
+	}
+	.description{
+		color: $white;
+		padding: 20px;
+		display: block;
+		@include media ('<desktop') {
+			font-size: 14px;
+		}
+	}
+	.more{
+		display: block;
+		padding: 10px 0 0;
+		color: rgb(230, 150, 150);
 	}
 }
 
@@ -132,6 +167,7 @@ $media-expressions: (
 	padding: 20px 0;
 	h1{
 		text-align: center;
+		margin-bottom: 40px;
 	}
 }
 
@@ -139,6 +175,10 @@ $media-expressions: (
 	float: left;
 	width: 80px;
 	height: 80px;
+	@include media ('<tablet') {
+		float: none;
+		margin: 0 auto;
+	}
 }
 
 .home-holder{
@@ -178,5 +218,4 @@ $media-expressions: (
 	margin: 0 auto;
 	padding: 0 15px;
 }
-
 

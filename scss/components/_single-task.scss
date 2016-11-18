@@ -1,0 +1,42 @@
+.single-task-holder{
+	@include cuboid();
+	margin-bottom: 80px;
+	.face{
+		box-shadow: 0 0 0 1px rgba(200, 200, 200, 0.4);
+	}
+}
+
+.single-task{
+	@extend %clearfix;
+	background: rgba(210, 210, 250, 0.3);
+	padding: 30px 10px;
+	.img-holder{
+		float: left;
+		width: 50%;
+		padding: 10px;
+	}
+	.text-holder{
+		float: right;
+		width: 50%;
+		padding: 10px;
+	}
+	.link{
+		font-family: $secondary-font;
+		font-weight: bold;
+		font-size: 24px;
+		&:hover{
+			color: $red;
+		}
+	}
+}
+
+.demoframe{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 600px;
+	height: 400px;
+	border: 2px solid red;
+	z-index: 20;
+}
