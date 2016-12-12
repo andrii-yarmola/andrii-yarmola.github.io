@@ -24,6 +24,7 @@
 		left: 0;
 		transform: translateZ(-($depth));
 		pointer-events:none;
+		transition: transform 0.3s;
 	}
 
 	.top {
@@ -49,6 +50,7 @@
 		left: 0;
 		transform: translateZ(-($depth/2)) rotateY(90deg) translateZ(-($depth/2));
 		pointer-events:none;
+		transition: all 0.3s;
 	}
 
 	.right {
@@ -58,6 +60,7 @@
 		right: 0;
 		transform: translateZ(-($depth/2)) rotateY(90deg) translateZ($depth/2);
 		pointer-events:none;
+		transition: all 0.3s;
 	}
 }
 

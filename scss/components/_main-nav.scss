@@ -15,7 +15,7 @@
 			line-height: 20px;
 		}
 	li{
-		@include cuboid(25px);
+		@include cuboid(10px);
 		transform-style: preserve-3d;
 		display: inline-block;
 		vertical-align: middle;

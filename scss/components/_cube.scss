@@ -54,27 +54,7 @@
 	&:hover ~ .cube {
 		transform: translate(-50%, -50%) perspective(800px) rotate3d(180, -45, 0, -105deg);
 		@include media ('<phone') {
-			transform: translate(-50%, -80%) perspective(800px) rotate3d(180, -45, 0, -135deg);
-		}
-	}
-}
-
-.a-bottom {
-	bottom: -50px;
-	left: 50%;
-	transform: translate(-50%, 0);
-	height: 50px;
-	width: 100px;
-	border-radius: 0 0 50px 50px;
-	@include media ('<phone') {
-		height: 30px;
-		width: 60px;
-		bottom: -5px;
-	}
-	&:hover ~ .cube {
-		transform: translate(-50%, -50%) perspective(800px) rotate3d(190, 120, 0, 125deg);
-		@include media ('<phone') {
-			transform: translate(0, 0) perspective(800px) rotate3d(180, -45, 0, 105deg);
+			transform: translate(-60%, -100%) perspective(800px) rotate3d(180, -30, 0, -90deg);
 		}
 	}
 }
@@ -94,7 +74,7 @@
 	&:hover ~ .cube {
 		transform: translate(-50%, -50%) perspective(800px) rotate3d(55, 180, 0, -339deg);
 		@include media ('<phone') {
-			transform: translate(-100%, -30%) perspective(800px) rotate3d(55, 180, 0, -249deg);
+			transform: translate(-70%, -45%) perspective(800px) rotate3d(55, 180, 0, 15deg);
 		}
 	}
 }
@@ -113,6 +93,9 @@
 	}
 	&:hover ~ .cube {
 		transform: translate(-50%, -50%) perspective(800px) rotate3d(-45, -180, 0, 105deg);
+		@include media ('<tablet') {
+			transform: translate(-30%, -50%) perspective(800px) rotate3d(-45, -180, 0, 105deg);
+		}
 		@include media ('<phone') {
 			transform: translate(0%, -75%) perspective(800px) rotate3d(-45, -180, 0, 105deg);
 		}
@@ -138,6 +121,17 @@
 		width: 100px;
 		transform: translate(-25%, -75%) perspective(800px) rotate3d(1, 1, 0, -45deg);
 	}
+	.img-holder{
+		width: 160px;
+		height: 160px;
+		border-radius: 50%;
+		overflow: hidden;
+		margin: 0 auto 10px;
+		display: block;
+		@include media ('<tablet') {
+			display: none;
+		}
+	}
 	.link{
 		position: absolute;
 		left: 0;
@@ -155,17 +149,6 @@
 				&:after {
 					animation: glitch-medium .5s cubic-bezier(.25, .46, .45, .94) reverse both infinite
 				}
-			}
-		}
-		.img-holder{
-			width: 160px;
-			height: 160px;
-			border-radius: 50%;
-			overflow: hidden;
-			margin: 0 auto 10px;
-			display: block;
-			@include media ('<tablet') {
-				display: none;
 			}
 		}
 		strong{
@@ -198,6 +181,10 @@
 			background-color: #d00;
 			opacity: 0.9;
 			transform: translate3d(0, 0, 100px);
+			.img-holder{
+				background: url(../images/img4.jpg) no-repeat;
+				background-size: cover;
+			}
 		}
 		&.n2 {
 			top: 0;
@@ -206,6 +193,10 @@
 			opacity: 0.9;
 			transform-origin: 0 0;
 			transform: translate3d(0, 0, 100px) rotate3d(0, 1, 0, 90deg);
+			.img-holder{
+				background: url(../images/img1.png) no-repeat;
+				background-size: cover;
+			}
 		}
 		&.n3 {
 			top: 100%;
@@ -230,6 +221,10 @@
 			opacity: 0.9;
 			transform-origin: 0 100%;
 			transform: translate3d(0, 0, 100px) rotate3d(1, 0, 0, 90deg);
+			.img-holder{
+				background: url(../images/img3.jpg) no-repeat;
+				background-size: cover;
+			}
 		}
 		&.n6 {
 			top: 0;

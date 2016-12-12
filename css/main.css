@@ -571,30 +571,8 @@ input[type='submit'] {
             transform: translate(-50%, -50%) perspective(800px) rotate3d(180, -45, 0, -105deg); }
     @media (max-width: 479px) {
       .a-top:hover ~ .cube {
-        -webkit-transform: translate(-50%, -80%) perspective(800px) rotate3d(180, -45, 0, -135deg);
-                transform: translate(-50%, -80%) perspective(800px) rotate3d(180, -45, 0, -135deg); } }
-
-.a-bottom {
-  bottom: -50px;
-  left: 50%;
-  -webkit-transform: translate(-50%, 0);
-      -ms-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
-  height: 50px;
-  width: 100px;
-  border-radius: 0 0 50px 50px; }
-  @media (max-width: 479px) {
-    .a-bottom {
-      height: 30px;
-      width: 60px;
-      bottom: -5px; } }
-  .a-bottom:hover ~ .cube {
-    -webkit-transform: translate(-50%, -50%) perspective(800px) rotate3d(190, 120, 0, 125deg);
-            transform: translate(-50%, -50%) perspective(800px) rotate3d(190, 120, 0, 125deg); }
-    @media (max-width: 479px) {
-      .a-bottom:hover ~ .cube {
-        -webkit-transform: translate(0, 0) perspective(800px) rotate3d(180, -45, 0, 105deg);
-                transform: translate(0, 0) perspective(800px) rotate3d(180, -45, 0, 105deg); } }
+        -webkit-transform: translate(-60%, -100%) perspective(800px) rotate3d(180, -30, 0, -90deg);
+                transform: translate(-60%, -100%) perspective(800px) rotate3d(180, -30, 0, -90deg); } }
 
 .a-left {
   left: -50px;
@@ -615,8 +593,8 @@ input[type='submit'] {
             transform: translate(-50%, -50%) perspective(800px) rotate3d(55, 180, 0, -339deg); }
     @media (max-width: 479px) {
       .a-left:hover ~ .cube {
-        -webkit-transform: translate(-100%, -30%) perspective(800px) rotate3d(55, 180, 0, -249deg);
-                transform: translate(-100%, -30%) perspective(800px) rotate3d(55, 180, 0, -249deg); } }
+        -webkit-transform: translate(-70%, -45%) perspective(800px) rotate3d(55, 180, 0, 15deg);
+                transform: translate(-70%, -45%) perspective(800px) rotate3d(55, 180, 0, 15deg); } }
 
 .a-right {
   height: 100px;
@@ -635,6 +613,10 @@ input[type='submit'] {
   .a-right:hover ~ .cube {
     -webkit-transform: translate(-50%, -50%) perspective(800px) rotate3d(-45, -180, 0, 105deg);
             transform: translate(-50%, -50%) perspective(800px) rotate3d(-45, -180, 0, 105deg); }
+    @media (max-width: 767px) {
+      .a-right:hover ~ .cube {
+        -webkit-transform: translate(-30%, -50%) perspective(800px) rotate3d(-45, -180, 0, 105deg);
+                transform: translate(-30%, -50%) perspective(800px) rotate3d(-45, -180, 0, 105deg); } }
     @media (max-width: 479px) {
       .a-right:hover ~ .cube {
         -webkit-transform: translate(0%, -75%) perspective(800px) rotate3d(-45, -180, 0, 105deg);
@@ -665,6 +647,16 @@ input[type='submit'] {
       width: 100px;
       -webkit-transform: translate(-25%, -75%) perspective(800px) rotate3d(1, 1, 0, -45deg);
               transform: translate(-25%, -75%) perspective(800px) rotate3d(1, 1, 0, -45deg); } }
+  .cube .img-holder {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 10px;
+    display: block; }
+    @media (max-width: 767px) {
+      .cube .img-holder {
+        display: none; } }
   .cube .link {
     position: absolute;
     left: 0;
@@ -680,16 +672,6 @@ input[type='submit'] {
     .cube .link:hover .glitch:after {
       -webkit-animation: glitch-medium 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
               animation: glitch-medium 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite; }
-    .cube .link .img-holder {
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      overflow: hidden;
-      margin: 0 auto 10px;
-      display: block; }
-      @media (max-width: 767px) {
-        .cube .link .img-holder {
-          display: none; } }
     .cube .link strong {
       display: block;
       text-transform: capitalize;
@@ -722,6 +704,9 @@ input[type='submit'] {
       opacity: 0.9;
       -webkit-transform: translate3d(0, 0, 100px);
               transform: translate3d(0, 0, 100px); }
+      .cube .face.n1 .img-holder {
+        background: url(../images/img4.jpg) no-repeat;
+        background-size: cover; }
     .cube .face.n2 {
       top: 0;
       left: 100%;
@@ -732,6 +717,9 @@ input[type='submit'] {
               transform-origin: 0 0;
       -webkit-transform: translate3d(0, 0, 100px) rotate3d(0, 1, 0, 90deg);
               transform: translate3d(0, 0, 100px) rotate3d(0, 1, 0, 90deg); }
+      .cube .face.n2 .img-holder {
+        background: url(../images/img1.png) no-repeat;
+        background-size: cover; }
     .cube .face.n3 {
       top: 100%;
       left: 0;
@@ -762,6 +750,9 @@ input[type='submit'] {
               transform-origin: 0 100%;
       -webkit-transform: translate3d(0, 0, 100px) rotate3d(1, 0, 0, 90deg);
               transform: translate3d(0, 0, 100px) rotate3d(1, 0, 0, 90deg); }
+      .cube .face.n5 .img-holder {
+        background: url(../images/img3.jpg) no-repeat;
+        background-size: cover; }
     .cube .face.n6 {
       top: 0;
       left: 0;
@@ -878,39 +869,45 @@ input[type='submit'] {
     #main-nav li .back {
       top: 0;
       left: 0;
-      -webkit-transform: translateZ(-25px);
-              transform: translateZ(-25px);
-      pointer-events: none; }
+      -webkit-transform: translateZ(-10px);
+              transform: translateZ(-10px);
+      pointer-events: none;
+      -webkit-transition: -webkit-transform 0.3s;
+              transition: transform 0.3s; }
     #main-nav li .top {
-      height: 25px;
+      height: 10px;
       top: 0;
       left: 0;
-      -webkit-transform: translateZ(-12.5px) translateY(-12.5px) rotateX(90deg);
-              transform: translateZ(-12.5px) translateY(-12.5px) rotateX(90deg);
+      -webkit-transform: translateZ(-5px) translateY(-5px) rotateX(90deg);
+              transform: translateZ(-5px) translateY(-5px) rotateX(90deg);
       pointer-events: none; }
     #main-nav li .bottom {
-      height: 25px;
+      height: 10px;
       top: auto;
       bottom: 0;
       left: 0;
-      -webkit-transform: translateZ(-12.5px) translateY(12.5px) rotateX(90deg);
-              transform: translateZ(-12.5px) translateY(12.5px) rotateX(90deg);
+      -webkit-transform: translateZ(-5px) translateY(5px) rotateX(90deg);
+              transform: translateZ(-5px) translateY(5px) rotateX(90deg);
       pointer-events: none; }
     #main-nav li .left {
-      width: 25px;
+      width: 10px;
       top: 0;
       left: 0;
-      -webkit-transform: translateZ(-12.5px) rotateY(90deg) translateZ(-12.5px);
-              transform: translateZ(-12.5px) rotateY(90deg) translateZ(-12.5px);
-      pointer-events: none; }
+      -webkit-transform: translateZ(-5px) rotateY(90deg) translateZ(-5px);
+              transform: translateZ(-5px) rotateY(90deg) translateZ(-5px);
+      pointer-events: none;
+      -webkit-transition: all 0.3s;
+              transition: all 0.3s; }
     #main-nav li .right {
-      width: 25px;
+      width: 10px;
       top: 0;
       left: auto;
       right: 0;
-      -webkit-transform: translateZ(-12.5px) rotateY(90deg) translateZ(12.5px);
-              transform: translateZ(-12.5px) rotateY(90deg) translateZ(12.5px);
-      pointer-events: none; }
+      -webkit-transform: translateZ(-5px) rotateY(90deg) translateZ(5px);
+              transform: translateZ(-5px) rotateY(90deg) translateZ(5px);
+      pointer-events: none;
+      -webkit-transition: all 0.3s;
+              transition: all 0.3s; }
     @media (max-width: 767px) {
       #main-nav li {
         display: block;
@@ -950,7 +947,9 @@ input[type='submit'] {
     left: 0;
     -webkit-transform: translateZ(-70px);
             transform: translateZ(-70px);
-    pointer-events: none; }
+    pointer-events: none;
+    -webkit-transition: -webkit-transform 0.3s;
+            transition: transform 0.3s; }
   .single-task-holder .top {
     height: 70px;
     top: 0;
@@ -972,7 +971,9 @@ input[type='submit'] {
     left: 0;
     -webkit-transform: translateZ(-35px) rotateY(90deg) translateZ(-35px);
             transform: translateZ(-35px) rotateY(90deg) translateZ(-35px);
-    pointer-events: none; }
+    pointer-events: none;
+    -webkit-transition: all 0.3s;
+            transition: all 0.3s; }
   .single-task-holder .right {
     width: 70px;
     top: 0;
@@ -980,7 +981,9 @@ input[type='submit'] {
     right: 0;
     -webkit-transform: translateZ(-35px) rotateY(90deg) translateZ(35px);
             transform: translateZ(-35px) rotateY(90deg) translateZ(35px);
-    pointer-events: none; }
+    pointer-events: none;
+    -webkit-transition: all 0.3s;
+            transition: all 0.3s; }
   .single-task-holder .face {
     box-shadow: 0 0 0 1px rgba(200, 200, 200, 0.4); }
 
@@ -1048,7 +1051,9 @@ input[type='submit'] {
   background: rgba(255, 255, 255, 0.5);
   margin-bottom: 60px;
   box-shadow: 0 0 20px 10px rgba(200, 200, 200, 0.6);
-  position: relative; }
+  position: relative;
+  -webkit-transition: -webkit-perspective 1s;
+          transition: perspective 1s; }
   .box .face {
     height: 100%;
     width: 100%;
@@ -1062,39 +1067,99 @@ input[type='submit'] {
   .box .back {
     top: 0;
     left: 0;
-    -webkit-transform: translateZ(-70px);
-            transform: translateZ(-70px);
-    pointer-events: none; }
+    -webkit-transform: translateZ(-200px);
+            transform: translateZ(-200px);
+    pointer-events: none;
+    -webkit-transition: -webkit-transform 0.3s;
+            transition: transform 0.3s; }
   .box .top {
-    height: 70px;
+    height: 200px;
     top: 0;
     left: 0;
-    -webkit-transform: translateZ(-35px) translateY(-35px) rotateX(90deg);
-            transform: translateZ(-35px) translateY(-35px) rotateX(90deg);
+    -webkit-transform: translateZ(-100px) translateY(-100px) rotateX(90deg);
+            transform: translateZ(-100px) translateY(-100px) rotateX(90deg);
     pointer-events: none; }
   .box .bottom {
-    height: 70px;
+    height: 200px;
     top: auto;
     bottom: 0;
     left: 0;
-    -webkit-transform: translateZ(-35px) translateY(35px) rotateX(90deg);
-            transform: translateZ(-35px) translateY(35px) rotateX(90deg);
+    -webkit-transform: translateZ(-100px) translateY(100px) rotateX(90deg);
+            transform: translateZ(-100px) translateY(100px) rotateX(90deg);
     pointer-events: none; }
   .box .left {
-    width: 70px;
+    width: 200px;
     top: 0;
     left: 0;
-    -webkit-transform: translateZ(-35px) rotateY(90deg) translateZ(-35px);
-            transform: translateZ(-35px) rotateY(90deg) translateZ(-35px);
-    pointer-events: none; }
+    -webkit-transform: translateZ(-100px) rotateY(90deg) translateZ(-100px);
+            transform: translateZ(-100px) rotateY(90deg) translateZ(-100px);
+    pointer-events: none;
+    -webkit-transition: all 0.3s;
+            transition: all 0.3s; }
   .box .right {
-    width: 70px;
+    width: 200px;
     top: 0;
     left: auto;
     right: 0;
-    -webkit-transform: translateZ(-35px) rotateY(90deg) translateZ(35px);
-            transform: translateZ(-35px) rotateY(90deg) translateZ(35px);
-    pointer-events: none; }
+    -webkit-transform: translateZ(-100px) rotateY(90deg) translateZ(100px);
+            transform: translateZ(-100px) rotateY(90deg) translateZ(100px);
+    pointer-events: none;
+    -webkit-transition: all 0.3s;
+            transition: all 0.3s; }
+  .box:hover {
+    position: relative; }
+    .box:hover .face {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      box-shadow: 0 0 0 1px rgba(200, 200, 200, 0.2); }
+    .box:hover .front {
+      top: 0;
+      left: 0;
+      z-index: 2;
+      position: relative; }
+    .box:hover .back {
+      top: 0;
+      left: 0;
+      -webkit-transform: translateZ(-50px);
+              transform: translateZ(-50px);
+      pointer-events: none;
+      -webkit-transition: -webkit-transform 0.3s;
+              transition: transform 0.3s; }
+    .box:hover .top {
+      height: 50px;
+      top: 0;
+      left: 0;
+      -webkit-transform: translateZ(-25px) translateY(-25px) rotateX(90deg);
+              transform: translateZ(-25px) translateY(-25px) rotateX(90deg);
+      pointer-events: none; }
+    .box:hover .bottom {
+      height: 50px;
+      top: auto;
+      bottom: 0;
+      left: 0;
+      -webkit-transform: translateZ(-25px) translateY(25px) rotateX(90deg);
+              transform: translateZ(-25px) translateY(25px) rotateX(90deg);
+      pointer-events: none; }
+    .box:hover .left {
+      width: 50px;
+      top: 0;
+      left: 0;
+      -webkit-transform: translateZ(-25px) rotateY(90deg) translateZ(-25px);
+              transform: translateZ(-25px) rotateY(90deg) translateZ(-25px);
+      pointer-events: none;
+      -webkit-transition: all 0.3s;
+              transition: all 0.3s; }
+    .box:hover .right {
+      width: 50px;
+      top: 0;
+      left: auto;
+      right: 0;
+      -webkit-transform: translateZ(-25px) rotateY(90deg) translateZ(25px);
+              transform: translateZ(-25px) rotateY(90deg) translateZ(25px);
+      pointer-events: none;
+      -webkit-transition: all 0.3s;
+              transition: all 0.3s; }
   @media (max-width: 1023px) {
     .box {
       margin-bottom: 30px; } }
